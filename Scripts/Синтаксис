@@ -1,0 +1,56 @@
+-- Переменные
+local number = 10  -- Создание переменной с числовым значением
+local text = "Hello, Roblox!"  -- Создание переменной с текстовым значением
+local isTrue = true  -- Создание переменной с логическим значением (true/false)
+
+-- Условные операторы
+if number > 5 then  -- Если число больше 5
+    print("Number is greater than 5")  -- Вывод сообщения в консоль
+elseif number == 5 then  -- Иначе, если число равно 5
+    print("Number is equal to 5")  -- Вывод сообщения в консоль
+else  -- В противном случае
+    print("Number is less than 5")  -- Вывод сообщения в консоль
+end
+
+-- Циклы
+for i = 1, 5 do  -- Цикл от 1 до 5
+    print("Iteration: " .. i)  -- Вывод номера текущей итерации
+end
+
+local count = 0
+while count < 3 do  -- Цикл, выполняющийся, пока count меньше 3
+    print("Count: " .. count)  -- Вывод текущего значения count
+    count = count + 1  -- Увеличение count на 1
+end
+
+-- Функции
+local function greet(name)  -- Создание функции с параметром name
+    print("Hello, " .. name)  -- Вывод приветствия с именем
+end
+
+greet("Player")  -- Вызов функции с аргументом "Player"
+
+-- Таблицы (массивы/объекты)
+local player = {  -- Создание таблицы (ассоциативного массива)
+    name = "Robloxian",  -- Поле name
+    health = 100,  -- Поле health
+    items = {"sword", "shield"}  -- Поле items (список)
+}
+
+print(player.name)  -- Доступ к полю name таблицы player
+print(player.items[1])  -- Доступ к первому элементу списка items
+
+-- Методы таблиц
+table.insert(player.items, "potion")  -- Добавление элемента в список items
+print(player.items[3])  -- Вывод третьего элемента списка items
+
+-- Работа с Roblox API
+local part = Instance.new("Part")  -- Создание новой части (Part) в Roblox
+part.Parent = workspace  -- Установка родителя части (добавление в игровой мир)
+part.Size = Vector3.new(5, 5, 5)  -- Установка размера части
+part.Position = Vector3.new(0, 10, 0)  -- Установка позиции части
+
+-- События
+part.Touched:Connect(function(hit)  -- Подписка на событие Touched (когда часть касается чего-либо)
+    print("Part was touched by: " .. hit.Name)  -- Вывод имени объекта, который коснулся части
+end)
