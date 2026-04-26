@@ -1098,19 +1098,6 @@ html, body {
           <div class="page-header"><h2>⚡ Журнал активности</h2><p>Полная история действий</p></div>
           <div class="card"><div class="activity-list" id="fullActivityList"></div></div>
         </div>
-        <div class="view" id="view-users">
-          <div class="page-header"><h2>👥 Пользователи</h2><p>Управление учётными записями</p></div>
-          <div class="card">
-            <div class="users-table-container">
-              <table class="users-table" id="usersTable">
-                <thead>
-                  <tr><th>Пользователь</th><th>Роль</th><th>Статус</th><th>Последний вход</th><th>Тип</th></tr>
-                </thead>
-                <tbody id="usersTableBody"></tbody>
-              </table>
-            </div>
-          </div>
-        </div>
         <div class="view" id="view-settings">
           <div class="page-header"><h2>⚙️ Настройки сайта</h2><p>Изменения видны всем пользователям</p></div>
           <div class="card"><div class="settings-group"><div class="settings-group-title">Основные</div><div class="settings-row"><div><div class="settings-label">Название сайта</div></div><input id="settingSiteName" class="form-control" style="width:200px" value="Nexus" oninput="saveSettings()"/></div><div class="settings-row"><div><div class="settings-label">Приветствие</div></div><input id="settingWelcome" class="form-control" style="width:200px" value="Добро пожаловать!" oninput="saveSettings()"/></div></div><div class="settings-group"><div class="settings-group-title">Внешний вид</div><div class="settings-row"><div><div class="settings-label">Акцентный цвет</div></div><div class="color-grid" id="colorGrid"></div></div><div class="settings-row"><div><div class="settings-label">Анимации</div></div><label class="toggle"><input type="checkbox" checked id="settingAnimations" onchange="saveSettings()"><div class="toggle-track"></div><div class="toggle-thumb"></div></label></div></div><div class="settings-group"><div class="settings-group-title">Опасная зона</div><div class="settings-row"><div><div class="settings-label">Сбросить все данные</div></div><button class="btn btn-danger btn-sm" onclick="resetAllData()">Сбросить</button></div></div></div>
