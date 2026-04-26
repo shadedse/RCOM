@@ -1173,7 +1173,7 @@ function renderCurrentView(){
 function initMainApp(){ applySettings(); buildSidebar(); renderSidebarUser(); showView('dashboard'); }
 function buildSidebar(){
   const isAdmin = currentUser.role==='admin';
-  const nav = [{view:'dashboard',icon:'⊞',label:'Дашборд',roles:['admin','user']},{view:'announcements',icon:'📢',label:'Объявления',roles:['admin','user']},{view:'catalog',icon:'🛍️',label:'Каталог',roles:['admin','user']},{view:'activity',icon:'⚡',label:'Активность',roles:['admin']},{view:'users',icon:'👥',label:'Пользователи',roles:['admin']},{view:'settings',icon:'⚙️',label:'Настройки',roles:['admin']},{view:'profile',icon:'👤',label:'Профиль',roles:['admin','user']}];
+  const nav = [{view:'dashboard',icon:'⊞',label:'Дашборд',roles:['admin','user']},{view:'announcements',icon:'📢',label:'Объявления',roles:['admin','user']},{view:'catalog',icon:'🛍️',label:'Каталог',roles:['admin','user']},{view:'activity',icon:'⚡',label:'Активность',roles:['admin']},{view:'settings',icon:'⚙️',label:'Настройки',roles:['admin']},{view:'profile',icon:'👤',label:'Профиль',roles:['admin','user']}];
   const sidebarNav = document.getElementById('sidebarNav');
   sidebarNav.innerHTML='';
   let last='';
